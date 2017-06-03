@@ -1,6 +1,7 @@
 package patterns.pacominube.decoratorkata
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
@@ -9,7 +10,8 @@ class NotificationActivity : AppCompatActivity() {
 
   companion object Start {
     fun startActivity(context: Context) {
-
+      val intent = Intent(context, NotificationActivity::class.java)
+      context.startActivity(intent)
     }
   }
 
@@ -19,7 +21,6 @@ class NotificationActivity : AppCompatActivity() {
     val toolbar = findViewById(R.id.toolbar) as Toolbar
     setSupportActionBar(toolbar)
   }
-
 
 
 }

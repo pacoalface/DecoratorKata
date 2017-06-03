@@ -2,6 +2,7 @@ package patterns.pacominube.decoratorkata.domain
 
 import android.content.Context
 import android.media.MediaPlayer
+import patterns.pacominube.decoratorkata.NotificationActivity
 import patterns.pacominube.decoratorkata.R
 
 /**
@@ -12,12 +13,12 @@ class HeavyAlertScheduler(val mediumAlertScheduler: MediumAlertScheduler) : Aler
   fun scheduleNoisyToast(context: Context) {
     mediumAlertScheduler.scheduleVibratorToast(context)
 
-    val mediaPlayer = MediaPlayer.create(context, R.raw.siu) as MediaPlayer
+    val mediaPlayer = MediaPlayer.create(context, R.raw.siu)
     mediaPlayer.start()
   }
 
   fun scheduleWindow(context: Context) {
-    
+    NotificationActivity.startActivity(context)
   }
 
 }
