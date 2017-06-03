@@ -16,7 +16,7 @@ import patterns.pacominube.decoratorkata.R
 /**
  * Created by pacominube on 31/5/17.
  */
-class NormalScheduler(val silentAlertScheduler: SilentAlertScheduler) : AlertScheduler by silentAlertScheduler {
+class MediumAlertScheduler(val silentAlertScheduler: SilentAlertScheduler) : AlertScheduler by silentAlertScheduler {
 
   fun scheduleVibratorToast(context: Context) {
     silentAlertScheduler.scheduleToast(context)
@@ -36,7 +36,7 @@ class NormalScheduler(val silentAlertScheduler: SilentAlertScheduler) : AlertSch
         .setContentText("Para ayudar a otros viajeros comparte tus experiencias vividas en dicho lugar")
         .setContentIntent(pendingIntent)
 
-    val mNotificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-    mNotificationManager.notify(34, mBuilder.build())
+    val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+    notificationManager.notify(34, mBuilder.build())
   }
 }
