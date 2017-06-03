@@ -4,18 +4,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-  <Button
-      android:layout_above="@+id/simple_alert"
-      android:id="@+id/power_alert"
-      android:text="Enviar Super alerta"
+
+  <RadioGroup
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
+      android:layout_height="match_parent"
+      android:orientation="horizontal"
+      android:weightSum="3">
+
+    <RadioButton
+        android:id="@+id/silent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Silencioso"/>
+
+    <RadioButton
+        android:id="@+id/medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Normal"/>
+
+    <RadioButton
+        android:id="@+id/heavy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Ruidoso"/>
+
+  </RadioGroup>
+
+  <Button
+      android:id="@+id/power_alert"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/simple_alert"
+      android:text="Enviar Super alerta"/>
 
   <Button
       android:id="@+id/simple_alert"
-      android:layout_alignParentBottom="true"
-      android:text="Enviar alerta"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:text="Enviar alerta"/>
 
 </RelativeLayout>

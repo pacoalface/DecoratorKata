@@ -12,6 +12,5 @@ class DecoratorActivity : AppCompatActivity() {
     findViewById(R.id.simple_alert).setOnClickListener({  })
     findViewById(R.id.power_alert).setOnClickListener({  })
 
-
   }
 }
