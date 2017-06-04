@@ -17,7 +17,7 @@ class SilentAlertScheduler : AlertScheduler {
   }
 
   override fun scheduleNotification(view: View) {
-    Snackbar.make(view,"Tu valoracion sobre este rincon se ha hecho de forma correcta", Snackbar.LENGTH_SHORT)
+    Snackbar.make(view,"Tu valoracion sobre este rincon se ha hecho de forma correcta", Snackbar.LENGTH_SHORT).show()
   }
 
 }

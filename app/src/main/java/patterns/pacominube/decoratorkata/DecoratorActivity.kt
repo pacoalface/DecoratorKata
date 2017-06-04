@@ -41,7 +41,7 @@ class DecoratorActivity : AppCompatActivity() {
       when(currentProfileId) {
         R.id.silent -> silentScheduler.scheduleNotification(findViewById(R.id.root_view))
         R.id.medium -> mediumScheduler.scheduleNotification(this)
-        R.id.heavy -> heavyScheduler.scheduleNotification(this)
+        R.id.heavy -> heavyScheduler.scheduleWindow(this)
       }
     })
   }

@@ -17,7 +17,7 @@ class HeavyAlertScheduler(val mediumAlertScheduler: MediumAlertScheduler) : Aler
     mediaPlayer.start()
   }
 
-  fun scheduleNotification(context: Context) {
+  fun scheduleWindow(context: Context) {
     NotificationActivity.startActivity(context)
   }
 
