@@ -11,7 +11,6 @@ import patterns.pacominube.decoratorkata.domain.SilentAlertScheduler
 
 class DecoratorActivity : AppCompatActivity() {
 
-
   val silentScheduler: SilentAlertScheduler = SilentAlertScheduler()
   val mediumScheduler: MediumAlertScheduler = MediumAlertScheduler(silentScheduler)
   val heavyScheduler: HeavyAlertScheduler = HeavyAlertScheduler(mediumScheduler)
