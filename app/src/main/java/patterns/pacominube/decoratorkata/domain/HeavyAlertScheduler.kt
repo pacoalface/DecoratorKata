@@ -11,13 +11,13 @@ import patterns.pacominube.decoratorkata.R
 class HeavyAlertScheduler(val mediumAlertScheduler: MediumAlertScheduler) : AlertScheduler by mediumAlertScheduler {
 
   fun scheduleNoisyToast(context: Context) {
-    mediumAlertScheduler.scheduleVibratorToast(context)
+    mediumAlertScheduler.scheduleToast(context)
 
     val mediaPlayer = MediaPlayer.create(context, R.raw.siu)
     mediaPlayer.start()
   }
 
-  fun scheduleWindow(context: Context) {
+  fun scheduleNotification(context: Context) {
     NotificationActivity.startActivity(context)
   }
 

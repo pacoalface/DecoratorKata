@@ -10,6 +10,8 @@ import android.widget.Toast
  */
 class SilentAlertScheduler : AlertScheduler {
 
+  constructor()
+
   override fun scheduleToast(context: Context) {
     Toast.makeText(context, "Tu valoracion sobre este rincon se ha hecho de forma correcta", Toast.LENGTH_SHORT).show()
   }

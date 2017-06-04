@@ -18,17 +18,16 @@ import patterns.pacominube.decoratorkata.R
  */
 class MediumAlertScheduler(val silentAlertScheduler: SilentAlertScheduler) : AlertScheduler by silentAlertScheduler {
 
-  fun scheduleVibratorToast(context: Context) {
+  fun scheduleMessage(context: Context) {
     silentAlertScheduler.scheduleToast(context)
     val vibrator: Vibrator = context.getSystemService(VIBRATOR_SERVICE) as Vibrator
     vibrator.vibrate(800)
   }
 
-  fun schedulePushNotification(context: Context) {
+  fun scheduleNotification(context: Context) {
     val intent = Intent(context, NotificationActivity::class.java)
 
     val pendingIntent = PendingIntent.getActivity(context, 0, intent, 0)
-
 
     val mBuilder = NotificationCompat.Builder(context)
         .setSmallIcon(R.mipmap.ic_launcher_round)
