@@ -31,6 +31,7 @@ class MediumAlertScheduler(val silentAlertScheduler: SilentAlertScheduler) : Ale
 
     val mBuilder = NotificationCompat.Builder(context)
         .setSmallIcon(R.mipmap.ic_launcher_round)
+        .setAutoCancel(true)
         .setContentTitle("Comparte tu experiencia valorada")
         .setContentText("Para ayudar a otros viajeros comparte tus experiencias vividas en dicho lugar")
         .setContentIntent(pendingIntent)
