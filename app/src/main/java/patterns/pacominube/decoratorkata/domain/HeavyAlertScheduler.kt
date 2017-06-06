@@ -11,8 +11,8 @@ import patterns.pacominube.decoratorkata.R
  */
 class HeavyAlertScheduler(val mediumAlertScheduler: MediumAlertScheduler) : AlertScheduler by mediumAlertScheduler {
 
-  override fun scheduleToast(context: Context) {
-    mediumAlertScheduler.scheduleToast(context)
+  override fun scheduleMessage(context: Context) {
+    mediumAlertScheduler.scheduleMessage(context)
 
     val mediaPlayer = MediaPlayer.create(context, R.raw.siu)
     mediaPlayer.start()

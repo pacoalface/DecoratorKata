@@ -18,8 +18,8 @@ import patterns.pacominube.decoratorkata.R
  */
 class MediumAlertScheduler(val silentAlertScheduler: SilentAlertScheduler) : AlertScheduler by silentAlertScheduler {
 
-  override fun scheduleToast(context: Context) {
-    silentAlertScheduler.scheduleToast(context)
+  override fun scheduleMessage(context: Context) {
+    silentAlertScheduler.scheduleMessage(context)
     val vibrator: Vibrator = context.getSystemService(VIBRATOR_SERVICE) as Vibrator
     vibrator.vibrate(800)
   }

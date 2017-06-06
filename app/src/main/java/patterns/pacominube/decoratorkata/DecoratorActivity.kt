@@ -29,9 +29,9 @@ class DecoratorActivity : AppCompatActivity() {
 
     findViewById(R.id.simple_alert).setOnClickListener({
       when(currentProfileId) {
-        R.id.silent -> silentScheduler.scheduleToast(this)
-        R.id.medium -> mediumScheduler.scheduleToast(this)
-        R.id.heavy -> heavyScheduler.scheduleToast(this)
+        R.id.silent -> silentScheduler.scheduleMessage(this)
+        R.id.medium -> mediumScheduler.scheduleMessage(this)
+        R.id.heavy -> heavyScheduler.scheduleMessage(this)
       }
 
     })

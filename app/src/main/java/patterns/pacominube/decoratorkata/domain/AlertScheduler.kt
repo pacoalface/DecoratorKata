@@ -8,5 +8,5 @@ import android.view.View
  */
 interface AlertScheduler {
   fun scheduleNotification(view: View)
-  fun scheduleToast(context : Context)
+  fun scheduleMessage(context : Context)
 }
