@@ -3,7 +3,6 @@ package patterns.pacominube.decoratorkata.domain
 import android.app.Activity
 import android.content.Context
 import android.media.MediaPlayer
-import android.view.View
 import com.tapadoo.alerter.Alerter
 import patterns.pacominube.decoratorkata.NotificationActivity
 import patterns.pacominube.decoratorkata.R
