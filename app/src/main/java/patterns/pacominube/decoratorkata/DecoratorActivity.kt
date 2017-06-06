@@ -31,7 +31,7 @@ class DecoratorActivity : AppCompatActivity() {
       when(currentProfileId) {
         R.id.silent -> silentScheduler.scheduleToast(this)
         R.id.medium -> mediumScheduler.scheduleToast(this)
-        R.id.heavy -> heavyScheduler.scheduleNoisyToast(this)
+        R.id.heavy -> heavyScheduler.scheduleToast(this)
       }
 
     })
